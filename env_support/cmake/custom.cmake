@@ -72,8 +72,9 @@ install(
 message(STATUS "Path ${LVGL_ROOT_DIR}")
 configure_file("${LVGL_ROOT_DIR}/lvgl.pc.in" lvgl.pc @ONLY)
 
+message(STATUS "Path bin ${CMAKE_BINARY_DIR}")
 install(
-  FILES "${LVGL_ROOT_DIR}/lvgl.pc"
+  FILES "${CMAKE_BINARY_DIR}/lvgl.pc"
   DESTINATION "${LIB_INSTALL_DIR}/pkgconfig/")
 
 set_target_properties(
