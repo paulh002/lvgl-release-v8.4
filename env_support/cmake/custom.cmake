@@ -70,7 +70,7 @@ install(
   OPTIONAL)
 
 message(STATUS "Path ${LVGL_ROOT_DIR}")
-configure_file("${LVGL_ROOT_DIR}/lvgl.pc.in" lvgl.pc @ONLY)
+configure_file("${LVGL_ROOT_DIR}/lvgl.pc.in" ${CMAKE_BINARY_DIR}/lvgl.pc @ONLY)
 
 message(STATUS "Path bin ${CMAKE_BINARY_DIR}")
 install(
