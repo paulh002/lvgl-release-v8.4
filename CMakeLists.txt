@@ -6,8 +6,10 @@ endif()
 
 if(DEFINED FETCHCONTENT_SOURCE_DIR_lvgl)
 	set(LVGL_ROOT_DIR ${FETCHCONTENT_SOURCE_DIR_lvgl})
+ message(STATUS "Using lvgl from FetchContent at ${FETCHCONTENT_SOURCE_DIR_MyLibrary}")
 else()
 	set(LVGL_ROOT_DIR ${CMAKE_CURRENT_LIST_DIR})
+	message(STATUS "Using lvgl from the direct source path")
 endif()
 
 if(ESP_PLATFORM)
