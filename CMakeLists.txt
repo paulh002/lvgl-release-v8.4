@@ -4,7 +4,10 @@ if(NOT ESP_PLATFORM)
   project(lvgl HOMEPAGE_URL https://github.com/lvgl/lvgl)
 endif()
 
-set(LVGL_ROOT_DIR ${CMAKE_CURRENT_LIST_DIR})
+if(DEFINED FETCHCONTENT_SOURCE_DIR_lvgl)
+	set(LVGL_ROOT_DIR ${FETCHCONTENT_SOURCE_DIR_lvgl})
+else
+	set(LVGL_ROOT_DIR ${CMAKE_CURRENT_LIST_DIR})
 
 if(ESP_PLATFORM)
   include(${CMAKE_CURRENT_LIST_DIR}/env_support/cmake/esp.cmake)
