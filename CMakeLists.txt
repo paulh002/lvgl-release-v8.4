@@ -6,8 +6,9 @@ endif()
 
 if(DEFINED FETCHCONTENT_SOURCE_DIR_lvgl)
 	set(LVGL_ROOT_DIR ${FETCHCONTENT_SOURCE_DIR_lvgl})
-else
+else()
 	set(LVGL_ROOT_DIR ${CMAKE_CURRENT_LIST_DIR})
+endif()
 
 if(ESP_PLATFORM)
   include(${CMAKE_CURRENT_LIST_DIR}/env_support/cmake/esp.cmake)
