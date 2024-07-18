@@ -72,7 +72,7 @@ install(
 if (EXIST "${LVGL_ROOT_DIR}/lvgl.pc.in")
 	configure_file("${LVGL_ROOT_DIR}/lvgl.pc.in" lvgl.pc @ONLY)
 endif()
-if (EXIST "${LVGL_ROOT_DIR}/_deps/lvgl-src/lvgl.pc.in)
+if (EXIST "${LVGL_ROOT_DIR}/_deps/lvgl-src/lvgl.pc.in")
 	configure_file("${LVGL_ROOT_DIR}/_deps/lvgl-src/lvgl.pc.in" lvgl.pc @ONLY)
 endif()
 
