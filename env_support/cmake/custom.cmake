@@ -69,12 +69,8 @@ install(
   RENAME "lv_conf.h"
   OPTIONAL)
 
-if (EXISTS "${LVGL_ROOT_DIR}/lvgl.pc.in")
-	configure_file("${LVGL_ROOT_DIR}/lvgl.pc.in" lvgl.pc @ONLY)
-endif()
-if (EXISTS "${LVGL_ROOT_DIR}/_deps/lvgl-src/lvgl.pc.in")
-	configure_file("${LVGL_ROOT_DIR}/_deps/lvgl-src/lvgl.pc.in" lvgl.pc @ONLY)
-endif()
+message(STATUS "Path ${LVGL_ROOT_DIR}")
+configure_file("${LVGL_ROOT_DIR}/lvgl.pc.in" lvgl.pc @ONLY)
 
 install(
   FILES "${CMAKE_BINARY_DIR}/lvgl.pc"
