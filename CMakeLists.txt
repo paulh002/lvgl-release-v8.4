@@ -6,8 +6,9 @@ endif()
 
 set(LVGL_ROOT_DIR ${CMAKE_CURRENT_LIST_DIR})
 message(STATUS "Source dir ${CMAKE_CURRENT_LIST_DIR}")
+message(STATUS "Build dir ${LVGL_BINARY_DIR}")
 
- if(ESP_PLATFORM)
+if(ESP_PLATFORM)
   include(${CMAKE_CURRENT_LIST_DIR}/env_support/cmake/esp.cmake)
 elseif(ZEPHYR_BASE)
   include(${CMAKE_CURRENT_LIST_DIR}/env_support/cmake/zephyr.cmake)
